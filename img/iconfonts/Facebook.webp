@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #22c3ca } 
+	</style>
+	<g id="Magellan-Home-Desktop HD">
+		<g id="Footer HD">
+			<g id="Social">
+				<path id="Facebook" fill-rule="evenodd" class="shp0" d="M20 40C8.95 40 0 31.05 0 20C0 8.95 8.95 0 20 0C31.04 0 40 8.95 40 20C40 31.05 31.04 40 20 40ZM24.17 17.33L21.33 17.33L21.33 15.51C21.33 14.83 21.79 14.68 22.12 14.68L24.12 14.68L24.12 11.68L21.36 11.67C18.3 11.67 17.6 13.9 17.6 15.33L17.6 17.33L15.83 17.33L15.83 20.42L17.6 20.42L17.6 29.17L21.33 29.17L21.33 20.42L23.84 20.42L24.17 17.33Z" />
+			</g>
+		</g>
+	</g>
+</svg>

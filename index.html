@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Touristo</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+	<div class="header__content _container">
+		<a href="#" class="header__logo"><span>Touristo</span></a>
+		<div class="header__nav">
+			<div class='header__top-menu menu-top'>
+				<div class='icon-menu'>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<nav class='menu-top__body'>
+					<ul class='menu-top__list'>
+						<li><a class="menu-top__link" href='#'>Про компанію</a></li>
+						<li><a class="menu-top__link" href='#'>Послуги</a></li>
+						<li><a class="menu-top__link" href='#'>Типові запитання</a></li>
+						<li><a class="menu-top__link" href='#'>Оплата і доставка</a></li>
+						<li><a class="menu-top__link" href='#'>Контакти</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class='header__bottom-menu menu-bottom'>
+				<div class='header__bottom-icon'>
+					<span class="_icon-Globe"></span>
+				</div>
+				<nav class='menu-bottom__body'>
+					<ul class='menu-bottom__list'>
+						<li><a class="menu-bottom__link" href='#'>Подорожі</a></li>
+						<li><a class="menu-bottom__link" href='#'>Розпродаж</a></li>
+						<li><a class="menu-bottom__link" href='#'>Країни</a></li>
+						<li><a class="menu-bottom__link" href='#'>Мої подорожі</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="header__call">
+			<a data-da=".menu-top__list,570,last" href="tel:+380509141959" class="header__call-icon _icon-phone"></a>
+			<div class="header__call-info">
+				<a href="tel:+380509141959" class="info-header__num">+38 050 914 19 59</a>
+				<span>Замовити дзвінок</span>
+			</div>
+		</div>
+		<button data-da=".menu-bottom__list,570,last" class="header__btn btn_b"><span>Знайти подорожі</span></button>
+	</div>
+</header>
+		<main class="page">
+			<section class="where where-height">
+				<div class="where__bg where-height _ibg">
+					<picture><source srcset="img/bg/01.webp" type="image/webp"><img src="img/bg/01.jpg" alt=""></picture>
+				</div>
+				<div class="where__container where-height">
+					<div class="where__content content-where where-height">
+						<h2 class="content-where__title title title-w">Куди відправимось?</h2>
+						<div class="content-where__subtitle">Ви можете здійснити пошук по декільком напр’ямкам одночасно</div>
+						<form class="content-where__input input-where">
+							<span class="_icon-search"></span>
+							<input autofocus id="search" type="text" class="input-where"
+								placeholder="Країна, місто, регіон, готель" autocomplete="off" name="search">
+							<ul class="input-where__list" id="list"></ul>
+						</form>
+						<div class="content-where__search search-where">
+							<div class="search-where__date">
+								<span class="_icon-calendar"></span>
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+									data-value="Місяць або дата" class="search-where__input input-where">
+							</div>
+							<div class="search-where__days days">
+								<div class="days__label">Тривалість</div>
+								<div class="days__range"></div>
+							</div>
+							<div class="search-where__spoller spoller _spollers">
+								<div class="spoller__block">
+									<div class="spoller__title _spoller">
+										<div class="spoller__icon _icon-Page"></div>
+										<div class="spoller__label">Кількість подорожуючих</div>
+										<div class="spoller__arrow"><picture><source srcset="img/iconfonts/down.svg" type="image/webp"><img src="img/iconfonts/down.svg" alt=""></picture></div>
+									</div>
+									<div class="spoller__body">
+										<div class="spoller__item item-spoller quantity">
+											<div class="item-spoller__text">Дорослих</div>
+											<input type="number" class="item-spoller__input" value="2">
+											<button class="item-spoller__minus quantity__button quantity__button_minus"></button>
+											<button class="item-spoller__plus quantity__button quantity__button_plus"></button>
+										</div>
+										<div class="spoller__item item-spoller quantity">
+											<div class="item-spoller__text">Дітей</div>
+											<input type="number" class="item-spoller__input" value="0">
+											<button class="item-spoller__minus quantity__button quantity__button_minus"></button>
+											<button class="item-spoller__plus quantity__button quantity__button_plus"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="content-where__item"><span>Розширений пошук</span><span>Сховати</span></div>
+						<button class="content-where__btn btn_w"><span>Знайти подорожі</span></button>
+					</div>
+				</div>
+				<div class="where__call">
+					<a href="tel:+380509141959">
+						<picture><source srcset="img/iconfonts/call.svg" type="image/webp"><img src="img/iconfonts/call.svg" alt=""></picture>
+					</a>
+				</div>
+			</section>
+			<section class="travel-sale">
+				<div class="travel-sale__container _container">
+					<h2 class="travel-sale__title title title_b">Розпродаж подорожей</h2>
+					<nav class="travel-sale__nav">
+						<ul class="travel-sale__list">
+							<li class="travel-sale__link filter-button _active" data-filter="all">Всі країни</li>
+							<li class="travel-sale__link filter-button" data-filter="tur">Екскрусійні тури</li>
+							<li class="travel-sale__link filter-button" data-filter="egipt">Єгипет</li>
+							<li class="travel-sale__link filter-button" data-filter="oae">ОАЕ</li>
+							<li class="travel-sale__link filter-button" data-filter="5">Шрі Ланка</li>
+							<li class="travel-sale__link filter-button" data-filter="6">Домінікана</li>
+							<li class="travel-sale__link filter-button" data-filter="7">Тайланд</li>
+							<li class="travel-sale__link filter-button" data-filter="8">Греція</li>
+							<li class="travel-sale__link filter-button" data-filter="9">Мальдіви</li>
+							<li class="travel-sale__link filter-button" data-filter="9">Куба</li>
+						</ul>
+					</nav>
+					<div class="travel-sale__content">
+						<article class="travel-sale__item item-sale filter-item" data-cat="tur">
+							<a href="#" class="item-sale__header">
+								<div class="item-sale__bg _ibg">
+									<picture><source srcset="img/travel/01.webp" type="image/webp"><img src="img/travel/01.jpg" alt=""></picture>
+								</div>
+								<span class="item-sale__text">Розпродаж</span>
+							</a>
+							<div class="item-sale__body body-sale">
+								<div class="body-sale__id">id: 103980</div>
+								<h4><a href="#" class="body-sale__title">Sunrise Marina Port Ghalib 5*</a></h4>
+								<div class="body-sale__subtitle">Єгипет, Шарм Ель Шейк</div>
+								<div class="body-sale__date"><span class="_icon-calendar1"></span> 16-26 листопада (20
+									ночей)
+								</div>
+								<div class="body-sale__description description-sale">
+									<div class="description-sale__clm">
+										<div class="description-sale__visa"><span class="_icon-visa"></span>Без візи</div>
+										<div class="description-sale__hotel">
+											<div class="description-sale__label">Готель</div>
+											<div class="description-sale__stars">
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+											</div>
+										</div>
+									</div>
+									<div class="description-sale__clm">
+										<div class="description-sale__departure">Виліт зі Львову</div>
+										<div class="description-sale__food">
+											<div class="description-sale__label">Харчування</div>
+											<div class="description-sale__item">Ultra All-Inclusive</div>
+										</div>
+									</div>
+								</div>
+								<div class="body-sale__price"><span>2 649</span> ₴ / особу <span>89 €</span></div>
+								<div class="checkbox">
+									<input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
+									<label for="formAgreement" class="checkbox__label"><span>Додати до порівняння</span></label>
+								</div>
+							</div>
+						</article>
+						<article class="travel-sale__item item-sale filter-item" data-cat="oae">
+							<a href="#" class="item-sale__header">
+								<div class="item-sale__bg _ibg">
+									<picture><source srcset="img/travel/02.webp" type="image/webp"><img src="img/travel/02.jpg" alt=""></picture>
+								</div>
+								<span class="item-sale__text">Розпродаж</span>
+							</a>
+							<div class="item-sale__body body-sale">
+								<div class="body-sale__id">id: 103980</div>
+								<h4><a href="#" class="body-sale__title">Вихідні в Празі</a></h4>
+								<div class="body-sale__subtitle">Чехія, Прага / Угорщина, Будапешт</div>
+								<div class="body-sale__date"><span class="_icon-calendar1"></span>09-12 люього (3 ночі)
+								</div>
+								<div class="body-sale__description description-sale">
+									<div class="description-sale__clm">
+										<div class="description-sale__visa"><span class="_icon-visa"></span>Без візи</div>
+										<div class="description-sale__hotel">
+											<div class="description-sale__label">Готель</div>
+											<div class="description-sale__stars">
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-white1"></span>
+												<span class="_icon-Star-white1"></span>
+											</div>
+										</div>
+									</div>
+									<div class="description-sale__clm">
+										<div class="description-sale__departure">Виїзд з Києва</div>
+										<div class="description-sale__food">
+											<div class="description-sale__label">Харчування</div>
+											<div class="description-sale__item">Сніданки</div>
+										</div>
+									</div>
+								</div>
+								<div class="body-sale__price"><span>1 235</span> ₴ / особу <span>89 €</span></div>
+								<div class="checkbox">
+									<input id="formAgreement_2" type="checkbox" name="agreement" class="checkbox__input _req">
+									<label for="formAgreement_2" class="checkbox__label"><span>Додати до
+											порівняння</span></label>
+								</div>
+							</div>
+						</article>
+						<article class="travel-sale__item item-sale filter-item" data-cat="egipt">
+							<a href="#" class="item-sale__header">
+								<div class="item-sale__bg _ibg">
+									<picture><source srcset="img/travel/03.webp" type="image/webp"><img src="img/travel/03.jpg" alt=""></picture>
+								</div>
+								<span class="item-sale__text">Розпродаж</span>
+							</a>
+							<div class="item-sale__body body-sale">
+								<div class="body-sale__id">id: 103980</div>
+								<h4><a href="#" class="body-sale__title">Golden Beach Palms Resort 4*</a></h4>
+								<div class="body-sale__subtitle">о. Балі, Денпасар</div>
+								<div class="body-sale__date"><span class="_icon-calendar1"></span>16-26 листопада (20
+									ночей)
+								</div>
+								<div class="body-sale__description description-sale">
+									<div class="description-sale__clm">
+										<div class="description-sale__visa"><span class="_icon-visa"></span>Без візи</div>
+										<div class="description-sale__hotel">
+											<div class="description-sale__label">Готель</div>
+											<div class="description-sale__stars">
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+											</div>
+										</div>
+									</div>
+									<div class="description-sale__clm">
+										<div class="description-sale__departure">Виліт з Одеси</div>
+										<div class="description-sale__food">
+											<div class="description-sale__label">Харчування</div>
+											<div class="description-sale__item">Сніданки + вечері</div>
+										</div>
+									</div>
+								</div>
+								<div class="body-sale__price"><span>32 500</span> ₴ / особу <span>1540 €</span></div>
+								<div class="checkbox">
+									<input id="formAgreement_3" type="checkbox" name="agreement" class="checkbox__input _req">
+									<label for="formAgreement_3" class="checkbox__label"><span>Додати до
+											порівняння</span></label>
+								</div>
+							</div>
+						</article>
+						<article class="travel-sale__item item-sale filter-item" data-cat="7">
+							<a href="#" class="item-sale__header">
+								<div class="item-sale__bg _ibg">
+									<picture><source srcset="img/travel/04.webp" type="image/webp"><img src="img/travel/04.jpg" alt=""></picture>
+								</div>
+								<span class="item-sale__text">Розпродаж</span>
+							</a>
+							<div class="item-sale__body body-sale">
+								<div class="body-sale__id">id: 103980</div>
+								<h4><a href="#" class="body-sale__title">Галопом по Європах</a></h4>
+								<div class="body-sale__subtitle">Чехія, Прага / Угорщина, Будапешт</div>
+								<div class="body-sale__date"><span class="_icon-calendar1"></span> 16-26 листопада (20
+									ночей)
+								</div>
+								<div class="body-sale__description description-sale">
+									<div class="description-sale__clm">
+										<div class="description-sale__visa"><span class="_icon-visa"></span>Без візи</div>
+										<div class="description-sale__hotel">
+											<div class="description-sale__label">Готель</div>
+											<div class="description-sale__stars">
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+											</div>
+										</div>
+									</div>
+									<div class="description-sale__clm">
+										<div class="description-sale__departure">Виліт зі Львову</div>
+										<div class="description-sale__food">
+											<div class="description-sale__label">Харчування</div>
+											<div class="description-sale__item">Ultra All-Inclusive</div>
+										</div>
+									</div>
+								</div>
+								<div class="body-sale__price"><span>2 649</span> ₴ / особу <span>89 €</span></div>
+								<div class="checkbox">
+									<input id="formAgreement_4" type="checkbox" name="agreement" class="checkbox__input _req">
+									<label for="formAgreement_4" class="checkbox__label"><span>Додати до
+											порівняння</span></label>
+								</div>
+							</div>
+						</article>
+						<article class="travel-sale__item item-sale filter-item" data-cat="egipt">
+							<a href="#" class="item-sale__header">
+								<div class="item-sale__bg _ibg">
+									<picture><source srcset="img/travel/05.webp" type="image/webp"><img src="img/travel/05.jpg" alt=""></picture>
+								</div>
+								<span class="item-sale__text">Розпродаж</span>
+							</a>
+							<div class="item-sale__body body-sale">
+								<div class="body-sale__id">id: 103980</div>
+								<h4><a href="#" class="body-sale__title">Галопом по Європах</a></h4>
+								<div class="body-sale__subtitle">Чехія, Прага / Угорщина, Будапешт</div>
+								<div class="body-sale__date"><span class="_icon-calendar1"></span> 16-26 листопада (20
+									ночей)
+								</div>
+								<div class="body-sale__description description-sale">
+									<div class="description-sale__clm">
+										<div class="description-sale__visa"><span class="_icon-visa"></span>Без візи</div>
+										<div class="description-sale__hotel">
+											<div class="description-sale__label">Готель</div>
+											<div class="description-sale__stars">
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+											</div>
+										</div>
+									</div>
+									<div class="description-sale__clm">
+										<div class="description-sale__departure">Виліт зі Львову</div>
+										<div class="description-sale__food">
+											<div class="description-sale__label">Харчування</div>
+											<div class="description-sale__item">Ultra All-Inclusive</div>
+										</div>
+									</div>
+								</div>
+								<div class="body-sale__price"><span>2 649</span> ₴ / особу <span>89 €</span></div>
+								<div class="checkbox">
+									<input id="formAgreement_5" type="checkbox" name="agreement" class="checkbox__input _req">
+									<label for="formAgreement_5" class="checkbox__label"><span>Додати до
+											порівняння</span></label>
+								</div>
+							</div>
+						</article>
+						<article class="travel-sale__item item-sale filter-item" data-cat="5">
+							<a href="#" class="item-sale__header">
+								<div class="item-sale__bg _ibg">
+									<picture><source srcset="img/travel/01.webp" type="image/webp"><img src="img/travel/01.jpg" alt=""></picture>
+								</div>
+								<span class="item-sale__text">Розпродаж</span>
+							</a>
+							<div class="item-sale__body body-sale">
+								<div class="body-sale__id">id: 103980</div>
+								<h4><a href="#" class="body-sale__title">Sunrise Marina Port Ghalib 5*</a></h4>
+								<div class="body-sale__subtitle">Єгипет, Шарм Ель Шейк</div>
+								<div class="body-sale__date"><span class="_icon-calendar1"></span> 16-26 листопада (20
+									ночей)
+								</div>
+								<div class="body-sale__description description-sale">
+									<div class="description-sale__clm">
+										<div class="description-sale__visa"><span class="_icon-visa"></span>Без візи</div>
+										<div class="description-sale__hotel">
+											<div class="description-sale__label">Готель</div>
+											<div class="description-sale__stars">
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+											</div>
+										</div>
+									</div>
+									<div class="description-sale__clm">
+										<div class="description-sale__departure">Виліт зі Львову</div>
+										<div class="description-sale__food">
+											<div class="description-sale__label">Харчування</div>
+											<div class="description-sale__item">Ultra All-Inclusive</div>
+										</div>
+									</div>
+								</div>
+								<div class="body-sale__price"><span>32 500</span> ₴ / особу <span>89 €</span></div>
+								<div class="checkbox">
+									<input id="formAgreement_6" type="checkbox" name="agreement" class="checkbox__input _req">
+									<label for="formAgreement_6" class="checkbox__label"><span>Додати до
+											порівняння</span></label>
+								</div>
+							</div>
+						</article>
+						<article class="travel-sale__item item-sale filter-item" data-cat="tur">
+							<a href="#" class="item-sale__header">
+								<div class="item-sale__bg _ibg">
+									<picture><source srcset="img/travel/07.webp" type="image/webp"><img src="img/travel/07.jpg" alt=""></picture>
+								</div>
+								<span class="item-sale__text">Розпродаж</span>
+							</a>
+							<div class="item-sale__body body-sale">
+								<div class="body-sale__id">id: 103980</div>
+								<h4><a href="#" class="body-sale__title">Вихідні в Празі</a></h4>
+								<div class="body-sale__subtitle">Чехія, Прага / Угорщина, Будапешт</div>
+								<div class="body-sale__date"><span class="_icon-calendar1"></span> 16-26 листопада (20
+									ночей)
+								</div>
+								<div class="body-sale__description description-sale">
+									<div class="description-sale__clm">
+										<div class="description-sale__visa"><span class="_icon-visa"></span>Без візи</div>
+										<div class="description-sale__hotel">
+											<div class="description-sale__label">Готель</div>
+											<div class="description-sale__stars">
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+											</div>
+										</div>
+									</div>
+									<div class="description-sale__clm">
+										<div class="description-sale__departure">Виїзд з Києва</div>
+										<div class="description-sale__food">
+											<div class="description-sale__label">Харчування</div>
+											<div class="description-sale__item">Сніданки</div>
+										</div>
+									</div>
+								</div>
+								<div class="body-sale__price"><span>1 235</span> ₴ / особу <span>45 €</span></div>
+								<div class="checkbox">
+									<input id="formAgreement_7" type="checkbox" name="agreement" class="checkbox__input _req">
+									<label for="formAgreement_7" class="checkbox__label"><span>Додати до
+											порівняння</span></label>
+								</div>
+							</div>
+						</article>
+						<article class="travel-sale__item item-sale filter-ite" data-cat="9">
+							<a href="#" class="item-sale__header">
+								<div class="item-sale__bg _ibg">
+									<picture><source srcset="img/travel/08.webp" type="image/webp"><img src="img/travel/08.jpg" alt=""></picture>
+								</div>
+								<span class="item-sale__text">Розпродаж</span>
+							</a>
+							<div class="item-sale__body body-sale">
+								<div class="body-sale__id">id: 103980</div>
+								<h4><a href="#" class="body-sale__title">Golden Beach Palms Resort 4*</a></h4>
+								<div class="body-sale__subtitle">о. Балі, Денпасар</div>
+								<div class="body-sale__date"><span class="_icon-calendar1"></span> 16-26 листопада (20
+									ночей)
+								</div>
+								<div class="body-sale__description description-sale">
+									<div class="description-sale__clm">
+										<div class="description-sale__visa"><span class="_icon-visa"></span>Без візи</div>
+										<div class="description-sale__hotel">
+											<div class="description-sale__label">Готель</div>
+											<div class="description-sale__stars">
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+												<span class="_icon-Star-blue"></span>
+											</div>
+										</div>
+									</div>
+									<div class="description-sale__clm">
+										<div class="description-sale__departure">Виїзд зі Львову</div>
+										<div class="description-sale__food">
+											<div class="description-sale__label">Харчування</div>
+											<div class="description-sale__item">Сніданки + вечері</div>
+										</div>
+									</div>
+								</div>
+								<div class="body-sale__price"><span>3 000</span> ₴ / особу <span>100 €</span></div>
+								<div class="checkbox">
+									<input id="formAgreement_8" type="checkbox" name="agreement" class="checkbox__input _req">
+									<label for="formAgreement_8" class="checkbox__label"><span>Додати до
+											порівняння</span></label>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="travel-sale__btn btn_b"><span>Всі акційні подорожі</span></div>
+				</div>
+			</section>
+			<form action="#" class="form">
+				<div class="form__container _container">
+					<div class="form__caption">Отримуйте найвигідніші пропозиції першими — підпишіться на нашу розсилку</div>
+					<div class="form__items">
+						<div class="form__item">
+							<div class="form__label">По email:</div>
+							<div class="form__input">
+								<span class="_icon-Mail"></span>
+								<input autocomplete="off" type="email" name="form[]" data-error="Ошибка"
+									data-value="Ваша email адреса" class="form__input-e input-where">
+								<button class="form__btn">Підписатись</button>
+							</div>
+						</div>
+						<div class="form__item">
+							<div class="form__label">По смс:</div>
+							<div class="form__input">
+								<span class="_icon-Mob"></span>
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+									data-value="Ваш номер телефону" class="form__input-m input-where">
+								<button class="form__btn">Підписатись</button>
+							</div>
+						</div>
+					</div>
+					<div class="form__tabs _tabs">
+						<nav class="form__tabs-nav">
+							<div class="form__tabs-item _tabs-item _active">По email:</div>
+							<div class="form__tabs-item _tabs-item">По смс:</div>
+						</nav>
+						<div class="form__tabs-body">
+							<div class="form__tabs-block _tabs-block _active form__input">
+								<span class="_icon-Mail"></span>
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+									data-value="Ваша email адреса" class="form__input form__input-e input-where">
+							</div>
+							<div class="form__tabs-block _tabs-block form__input">
+								<span class="_icon-Mob"></span>
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+									data-value="Ваш номер телефону" class="form__input form__input-m input-where">
+							</div>
+						</div>
+					</div>
+					<div class="form__text">Не більше 1 повідомлення в тиждень. Ніякого спаму. Ви зможете відписатись
+						будь-коли забажаєте.</div>
+					<button class="form__subscribe btn_w"><span>Підписатись</span></button>
+				</div>
+			</form>
+			<section class="proposals">
+				<div class="proposals__container _container">
+					<h2 class="proposals__title title">Спеціальні пропозиції</h2>
+					<div class="proposals__body">
+						<article class="proposals__item item-proposals">
+							<div class="item-proposals__bg">
+								<picture><source srcset="img/article/01.webp" type="image/webp"><img src="img/article/01.jpg" alt=""></picture>
+							</div>
+							<div class="item-proposals__content">
+								<h6 class="item-proposals__title">Весілля за кордоном</h6>
+								<div class="item-proposals__text">Перетворіть своє весілля на незабутню казку, неповторне
+									дійство в одному з найчарівніших куточків світу.</div>
+								<a href="#" class="item-proposals__link">Дізнатися більше</a>
+							</div>
+						</article>
+						<article class="proposals__item item-proposals">
+							<div class="item-proposals__bg">
+								<picture><source srcset="img/article/02.webp" type="image/webp"><img src="img/article/02.jpg" alt=""></picture>
+							</div>
+							<div class="item-proposals__content">
+								<h6 class="item-proposals__title">Shopping тури в Дубаї</h6>
+								<div class="item-proposals__text">Перетворіть своє весілля на незабутню казку, неповторне
+									дійство в одному з найчарівніших куточків світу.</div>
+								<a href="#" class="item-proposals__link">Дізнатися більше</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="reviews__container _container">
+					<h2 class="reviews__title title">Відгуки туристів</h2>
+					<div class="reviews__body">
+						<div class="reviews__slider _swiper">
+							<div class="reviews__slide slide-reviews">
+								<div class="slide-reviews__name">Наталія (25)</div>
+								<div class="slide-reviews__text">Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования.</div>
+							</div>
+							<div class="reviews__slide slide-reviews">
+								<div class="slide-reviews__name">Олександр (43)</div>
+								<div class="slide-reviews__text">Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования.</div>
+							</div>
+							<div class="reviews__slide slide-reviews">
+								<div class="slide-reviews__name">Антоніна (34)</div>
+								<div class="slide-reviews__text">Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования.</div>
+							</div>
+							<div class="reviews__slide slide-reviews">
+								<div class="slide-reviews__name">Наталія (25)</div>
+								<div class="slide-reviews__text">Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования.</div>
+							</div>
+							<div class="reviews__slide slide-reviews">
+								<div class="slide-reviews__name">Наталія (25)</div>
+								<div class="slide-reviews__text">Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования.</div>
+							</div>
+							<div class="reviews__slide slide-reviews">
+								<div class="slide-reviews__name">Наталія (25)</div>
+								<div class="slide-reviews__text">Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования.</div>
+							</div>
+							<div class="reviews__slide slide-reviews">
+								<div class="slide-reviews__name">Наталія (25)</div>
+								<div class="slide-reviews__text">Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует
+									времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того,
+									от процесса его планирования.</div>
+							</div>
+						</div>
+						<div class="reviews__arrow">
+							<div class="reviews__arrow-item reviews__arrow-prev _icon-prev"></div>
+							<div class="reviews__arrow-item reviews__arrow-next _icon-next"></div>
+						</div>
+						<div class="reviews__pagination"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+	<div class="footer__content _container">
+		<div class="footer__info footer__clm info-footer">
+			<div class="info-footer__email">
+				<span class="_icon-Mail"></span>
+				<a href="email:touristo@gmail.com" class="info-footer__gmail">touristo@gmail.com</a>
+			</div>
+			<div class="info-footer__num">
+				<span class="_icon-Mob"></span>
+				<a href="tel:+381234565689" class="info-footer__tel">+38 123 456 56 89</a>
+				<a href="tel:+381234565689" class="info-footer__tel">+38 123 456 56 89</a>
+			</div>
+			<div class="info-footer__location">
+				<span class="_icon-Location"></span>
+				<span>м. Ужгород,</span>
+				<span>вул. Івана Франка 1в, оф. 1 </span>
+			</div>
+			<div class="info-footer__social">
+				<a href="#" class="info-footer__link"><picture><source srcset="img/iconfonts/Facebook.svg" type="image/webp"><img src="img/iconfonts/Facebook.svg" alt=""></picture></a>
+				<a href="#" class="info-footer__link"><picture><source srcset="img/iconfonts/instagram.svg" type="image/webp"><img src="img/iconfonts/instagram.svg" alt=""></picture></a>
+				<a href="#" class="info-footer__link"><picture><source srcset="img/iconfonts/vk.svg" type="image/webp"><img src="img/iconfonts/vk.svg" alt=""></picture></a>
+			</div>
+		</div>
+		<div class="footer__clm">
+			<div class="footer__caption">Подорожі</div>
+			<ul class="footer__list">
+				<li><a href="" class="footer__item">Пошук турів</a></li>
+				<li><a href="" class="footer__item">Каталог турів</a></li>
+				<li><a href="" class="footer__item">Весілля за кордоном</a></li>
+			</ul>
+		</div>
+		<div class="footer__clm">
+			<div class="footer__caption">Розпродаж</div>
+			<ul class="footer__list">
+				<li><a href="" class="footer__item">Акційні подорожі</a></li>
+				<li><a href="" class="footer__item">Що таке Бамбарбія</a></li>
+			</ul>
+		</div>
+		<div class="footer__clm">
+			<div class="footer__caption">Країни</div>
+			<ul class="footer__list">
+				<li><a href="" class="footer__item">Єгипет</a></li>
+				<li><a href="" class="footer__item">ОАЄ</a></li>
+				<li><a href="" class="footer__item">Туреччина</a></li>
+				<li><a href="" class="footer__item">Домінікана</a></li>
+				<li><a href="" class="footer__item">Шрі Ланка</a></li>
+				<li><a href="" class="footer__item">Тайланд</a></li>
+				<li><a href="" class="footer__item">ОАЄ</a></li>
+				<li><a href="" class="footer__item">Греція</a></li>
+			</ul>
+		</div>
+		<div class="footer__clm">
+			<div class="footer__caption">Про нас</div>
+			<ul class="footer__list">
+				<li><a href="" class="footer__item">Про компанію</a></li>
+				<li><a href="" class="footer__item">Послуги</a></li>
+				<li><a href="" class="footer__item">Типові запитання</a></li>
+				<li><a href="" class="footer__item">Доставка та оплатая</a></li>
+				<li><a href="" class="footer__item">Контакти</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+	</div>
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<script src="js/vendors.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+
+</html>
